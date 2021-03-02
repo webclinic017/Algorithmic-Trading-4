@@ -1,33 +1,31 @@
 # Testing directories
 __Supplementary/*
 Output/*
-TWS API/*
 
+TWS API/*
+!/TWS API/
+!/TWS API/source
+TWS API/source/pythonclient/*
+!/TWS API/source/pythonclient/ibapi
 
 # Ignore git crammers
-*.csv
 *.txt
 *.log
+*.csv
+
+!tickers_ledger.csv
+!VAS.csv
+!ASX_LISTING*.csv
 
 # Strategies
 Strategies/*.py
+!Strategies/IStrategy.py
 !Strategies/Crossover.py
 !Strategies/Crystal.py
 !Strategies/MACD.py
 
-BADDIES.JPG
-
-# Uglies
-__Supplementary/MainPushbullet.py
-viewer.py
 
 # Secret
 *.docx
 _devconfig.py
 
-# CSV
-/Strategies/Oldies/
-/DataScrape/Symbols/
-/Datasets/CSV_DAILY/
-/Datasets/CSV/
-/Datasets/CSV_REPAIR/
