@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d18ad6e-cc75-4782-b67d-4ab1b2d8d313" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TWS API/source/pythonclient/ibapi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainEmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainEmail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -431,16 +431,6 @@
           <url>file://$PROJECT_DIR$/Strategies/RocketCatcher.py</url>
           <line>313</line>
           <option name="timeStamp" value="366" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MainEmail.py</url>
-          <line>162</line>
-          <option name="timeStamp" value="368" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MainEmail.py</url>
-          <line>179</line>
-          <option name="timeStamp" value="370" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Services/SimViewer.py</url>

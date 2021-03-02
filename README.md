@@ -1,8 +1,4 @@
 # AlgoTrading
- Jim Simons wannabe loses money
- 
-| Simulate![VideoBlocks](History/examplesimulation.JPG?raw=true) | Signal![VideoBlocks](History/examplesignal.JPG?raw=true) |
-|:---:|:---:|
 
 Contents:\
 [1 Overview](#1-overview)\
@@ -28,7 +24,7 @@ This readme briefly captures thoughts.
 *What will it do?*
 1. Extra income with minimal supervision
 2. Learn something and enjoy
-3. Make this repository private 
+3. Get to the point where repo is worth making private 
 
 ### 1.2 Requirements
 *How will it get done?*
@@ -38,6 +34,7 @@ This readme briefly captures thoughts.
 5. Risk Management
 6. Automation
 7. Auditing/transaction logging
+8. Iterate/optimise
 
 ### 1.3 Edge
 *Why will it get done?*\
@@ -59,22 +56,27 @@ b) Long volatility plays on low market-cap which are hyped (capture pump and dum
 4. Be as close in code and operation to real trading, so the transition is easier
 
 ### 2.2 Requirements
-1. Meticulous data storage
-0.1 Automatically scrape, repair and clean data- get early get often
+1. Meticulous data storage \
+Automatically scrape, repair and clean -- get early, get often
 2. Multiple strategies, interfacing to broker and account
-3. Manage risk and sizing
-4.1 Set aim for enter, exit and stop
-5.2 Reallocate max with Sharpe-ratio
-6. Book keeping
-7. Aim for autonomy, but potential for remote decision making notifications
+3. Manage risk and sizing\
+Set aim for enter, exit and stop\
+Reallocate max with Sharpe-ratio
+4. Book keeping
 
 ### 2.3 Progress
+Rnning architecture is up and working. Need to now get to technical side.
 - [x] Data management 
 - [x] Basic Strategies
 - [x] Basic optimisation
 - [x] Automation via email signal notifications
-- [ ] Better strategies...
-- [ ] Window optimsation (overfitting?)
+- [ ] Better strategies... need to define entry exits
+- [ ] Risk manage
+- [ ] Window optimisation (overfitting?)
+
+ 
+| Simulate![VideoBlocks](History/examplesimulation.JPG?raw=true) | Signal![VideoBlocks](History/examplesignal.JPG?raw=true) |
+|:---:|:---:|
 
 
 ## 3. Sentiment Analysis
@@ -94,4 +96,3 @@ While this probably won't give good tips, can be to supplement other strategies 
 
 ### 3.3 Progress
 - [x] Very basic scraping and collection schedule.
-

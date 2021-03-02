@@ -139,7 +139,6 @@ if __name__ == "__main__":
          (s + ".AX" in tickers_ledger.TICKER.values) and
          (t.find("Ltd") > 0)], k=5)
 
-    symbols = ["Z1P", "LRS", "LKE"]
     strategy_two = RocketCatcher(manager, "RC", symbols, {
             "days_required_5m": 3,
             "days_required_1d": 31,
