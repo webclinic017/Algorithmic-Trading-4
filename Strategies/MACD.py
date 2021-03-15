@@ -22,16 +22,16 @@ class MACD(IStrategy):
     def __init__(self, manager, name, symbols, properties):
 
         self.days_required_5m = None
+        #self.days_required_1d = None
         self.ema_short_days = None
         self.ema_long_days = None
         self.signal_line_days = None
 
-
         super().__init__(manager, name, symbols, properties,
                          required=['days_required_5m',
-                                   'days_required_1d',
+                                   #'days_required_1d',
                                    'ema_short_days', 'ema_long_days', 'signal_line_days'],
-                         mainBarsize="1day")
+                         )#mainBarsize="1day")
 
     def setup(self):
         # contract, endDateTime, durationStr, barSizeSetting, whatToShow, useRTH, formatDate, keepUpToDate, chartOptions
@@ -43,7 +43,7 @@ class MACD(IStrategy):
 
             # Make a data request
             self.reqHistoricalData(contract, "", f"{self.days_required_5m+1} D", "5 min", "BID_ASK", 0, 1, True, [])
-            self.reqHistoricalData(contract, "", f"{self.days_required_1d+5} D", "1 day", "BID_ASK", 0, 1, True, [])
+            #self.reqHistoricalData(contract, "", f"{self.days_required_1d+5} D", "1 day", "BID_ASK", 0, 1, True, [])
 
     def openPosition(self, symbol, volume):
         contract = Contract()
@@ -70,14 +70,13 @@ class MACD(IStrategy):
         self.placeOrder(contract, order)
 
     def closeall(self):
-        for symbol in self.symbols:
-            self.closePosition(symbol, 0)
+        self.update(forcedexit=True)
 
-    def update(self):
+    def update(self, forcedexit=False):
 
         for symbol in self.symbols:
             data5m = self[symbol]
-            data1d = self[symbol+"1day"]
+            #data1d = self[symbol+"1day"]
 
             nrows, ncols = data5m.shape
             if nrows < 6 * 12 * self.ema_long_days:
@@ -94,14 +93,18 @@ class MACD(IStrategy):
 
                 #self.indicators[f'ema {12}'] = ema12
                 #self.indicators[f'ema {26}'] = ema26
-                self.indicators['macd'] = (macd, {})
-                self.indicators['signal'] = (signal, {})
+                self.indicators['macd'] = (macd, {"panel": 2})
+                self.indicators['signal'] = (signal, {"panel": 2})
+
+                if forcedexit:
+                    self.closePosition(symbol, 0)
+                    continue
 
                 trending_up = False
                 trending_down = False
 
                 lookback = 12 * 1
-                for i in range(1, lookback):
+                for i in range(1, lookback+1):
 
                     if macd[-i - 1] <= signal[-i - 1] and macd[-i] > signal[-i]:
                         trending_up = True

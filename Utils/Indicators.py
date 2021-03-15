@@ -14,3 +14,5 @@ def vwap(df):
 
     df = df.groupby(df.index.date, group_keys=False).apply(vvwap)
     return df.pop('vwap')
+
+

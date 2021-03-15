@@ -21,10 +21,13 @@ class CrystalV3(IStrategy):
     def __init__(self, manager, name, symbols, properties):
 
         self.days_required = None
+
         self.ma_days = None
+        self.ma_long_days = None
+
         self.buy_volume_sigma = None,
         self.sell_volume_sigma = None
-        self.ma_long_days = None
+
         self.positive_sigma = None
         self.negative_sigma = None
 
@@ -75,7 +78,7 @@ class CrystalV3(IStrategy):
     def update(self):
 
         for symbol in self.symbols:
-            self.logger.info(f"Update called for {symbol} ({self.name}) at {datetime.datetime.now()}")
+            self.logger.debug(f"Update called for {symbol} ({self.name}) at {datetime.datetime.now()}")
 
             data = self[symbol]
 
@@ -83,7 +86,7 @@ class CrystalV3(IStrategy):
             if nrows < 12 * 6 * self.ma_long_days + 12:
                 continue
 
-            self.logger.info(f"latest data for {symbol} ({self.name}) is {data.index[-1]}")
+            self.logger.debug(f"latest data for {symbol} ({self.name}) is {data.index[-1]}")
 
             avg_price = Indicators.avgPrice(data)
             savgol_window = (3 * 12) + 1
@@ -114,31 +117,31 @@ class CrystalV3(IStrategy):
 
                 if sma[-i - 1] >= wma[-i - 1] and sma[-i] < wma[-i]:
                     trending_down = True
+            self.openPosition(symbol, 1)
+            # volume = data.Volume  # [-72*self.ma_long_days:]
+            # volume_std = np.std(volume)
+            # try:
+            #     volume_med = np.median([v for v in volume if v])
+            #     volume_avg = np.average([v for v in volume if v])
+            # except:
+            #     volume_med = 0
+            #     volume_avg = 0
 
-            volume = data.Volume  # [-72*self.ma_long_days:]
-            volume_std = np.std(volume)
-            try:
-                volume_med = np.median([v for v in volume if v])
-                volume_avg = np.average([v for v in volume if v])
-            except:
-                volume_med = 0
-                volume_avg = 0
 
-
-            invol, inval = self.manager.account.getPosition(symbol)
-            if pd.Series(volume[-lookback:] > (volume_avg + self.buy_volume_sigma * volume_std)).any():
-                if avg_price[-1] < sma_long_minus[-1]:
-                    if not invol:
-                        # if current_price < sma_long_plus[-1]:
-                        goal = (self.manager.account.cash / 10) // 1
-                        minval = 1000
-                        if goal > minval:
-                            self.openPosition(symbol, goal // asset_data.values[-1])
-
-            if pd.Series(volume[-lookback:] > (volume_avg + self.sell_volume_sigma * volume_std)).any():
-                if avg_price[-1] > sma_long_plus[-1]:
-                    if invol:
-                        self.closePosition(symbol, invol)
+            # invol, inval = self.manager.account.getPosition(symbol)
+            # if pd.Series(volume[-lookback:] > (volume_avg + self.buy_volume_sigma * volume_std)).any():
+            #     if avg_price[-1] < sma_long_minus[-1]:
+            #         if not invol:
+            #             # if current_price < sma_long_plus[-1]:
+            #             goal = (self.manager.account.cash / 10) // 1
+            #             minval = 1000
+            #             if goal > minval:
+            #                 self.openPosition(symbol, goal // asset_data.values[-1])
+            #
+            # if pd.Series(volume[-lookback:] > (volume_avg + self.sell_volume_sigma * volume_std)).any():
+            #     if avg_price[-1] > sma_long_plus[-1]:
+            #         if invol:
+            #             self.closePosition(symbol, invol)
 
             # lookback = 12 * 1
             # for i in range(1, lookback):

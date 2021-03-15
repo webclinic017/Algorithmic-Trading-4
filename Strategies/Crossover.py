@@ -13,8 +13,8 @@ from ibapi.order import Order
 
 class Crossover(IStrategy):
     def __init__(self, manager, name, symbols, properties):
-        self.days_required = None
 
+        self.days_required = None
         self.sma_fast = None
         self.sma_med = None
         self.sma_slow = None

@@ -4,31 +4,32 @@ import pandas as pd
 
 from DataScrape.ScrapeReddit import ASX_LISTING
 from Datasets.scrape_data import replace_empties
-from _config import TICKERS_LEDGER
+from Services.Datafactory import DataFactory
+from Services.MyLogger import MyLogger
+from _config import TICKERS_LEDGER, ASX_GAME
 
 if __name__ == "__main__":
-    assert False, "broken don't run"
+    logger = MyLogger.getLogger("repair util", level=20)
+    datafactory = DataFactory.getInstance()
 
-    src_files = os.listdir(r"C:\Users\liamd\Documents\Project\AlgoTrading\Datasets\CSV")
-    for file_name in src_files:
-        full_file_name = os.path.join(r"C:\Users\liamd\Documents\Project\AlgoTrading\Datasets\CSV", file_name)
+    asx_game = pd.read_csv(ASX_GAME)
 
-        data = pd.read_csv(full_file_name)
+    to_replace = [s+".AX" for s in asx_game.Code]
 
-        rows, cols = data.shape
-        if cols > 7:
-            print(file_name)
+    print(f"TO REPLACE ({len(to_replace)}):")
+    for i, ticker in enumerate(to_replace):
+        DFS = DataFactory.repaired
+        try:
+            print(f"{ticker} ({i + 1}/{len(to_replace)})")
 
-    asx_listings = pd.read_csv(ASX_LISTING)
-    tickers_ledger = pd.read_csv(TICKERS_LEDGER)
+            datafactory.repaired = False
+            data = datafactory.loadSymbol(ticker).dropna()
+            repaired_data = replace_empties(data)
 
-    tickers = [s for s, mc, l in zip(asx_listings.code.values, asx_listings.market_cap.values, asx_listings.low.values)
-               if l < 5 and s + ".AX" in tickers_ledger.TICKER.values]
+            datafactory.repaired = True
+            repaired_data.to_csv(datafactory.getDataDir("5 min") + datafactory.symbol2file(ticker))
 
-    # tickers = pd.read_csv(TICKERS_LEDGER).TICKER.values -- 45
-
-    for i, ticker in enumerate(['VAS']):
-        print(f"{i + 1}/{len(tickers)}")
-        replace_empties(ticker)
-        # missing_times = t_range[~t_range.isin(t_dataframe)]
-    print("")
+        except Exception as e:
+            logger.info("ERROR", f"Error replacing empties for ticker {ticker} - {e} ")
+        finally:
+            DataFactory.repairedDFS = DFS

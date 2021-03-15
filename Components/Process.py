@@ -29,11 +29,8 @@ class ThreadedTask(threading.Thread):
         self.strategies = strategies
         self.symbols = functools.reduce(lambda a, b: set(a + b), [skwa["symbols"] for s, skwa in strategies])
         self.barsize = barsize
-
         self.rapid = rapid
-
         self.setup_days = setup_days
-
 
         if times is None:
             self.times = [
@@ -52,7 +49,6 @@ class ThreadedTask(threading.Thread):
         clock, datafactory = TradingClock.getInstance(), DataFactory.getInstance()
 
         # Configure
-        setup_days = 5
         # TODO: TOML
 
         # Where do we have available data
@@ -88,7 +84,6 @@ class ThreadedTask(threading.Thread):
                         # todo: need to really use the tws api before figuring this out..
                         for strategy in strategies:
                             strategy.update()
-
 
             if clock.date == end_date:
                 for strategy in strategies:

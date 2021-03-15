@@ -24,66 +24,6 @@ from _devconfig import *
 import random
 import pandas as pd
 
-def generate_message(simtracker):
-    # TODO: Make one big email
-    # https://stackoverflow.com/questions/920910/sending-multipart-html-emails-which-contain-embedded-images
-
-    # The mail addresses and password
-    sender_address = MY_EMAIL
-    sender_pass = MY_EMAIL_PASS
-
-    # Setup the MIME
-    message = MIMEMultipart('related')
-    message_alt = MIMEMultipart('alternative')
-    message.attach(message_alt)
-
-
-    message_text = ""
-    while len(simtracker.snapshots):
-        snapshot = simtracker.snapshots.pop(0)
-
-        symbol = snapshot.contract.symbol
-        action = snapshot.order.action
-        file = f"C:/Users/liamd/Documents/Project/AlgoTrading/Output/Emails/{symbol}_{action}_{clock.sync_datetime.strftime('%m%d%h')}.png"
-        fig, ax, leg_indicators = StrategyView.snapshot_to_fig(snapshot, account, savefile=file)
-
-
-        # We reference the image in the IMG SRC attribute by the ID we give it below
-        message_text += f'<p>SYMBOL: {symbol},  ACTION: {action},  DATE:{snapshot.data.index[-1]} </p>' + \
-                        f'<br><img src="cid:image_{symbol}">' + \
-                        f'<br>' + \
-                        "<p>"+", ".join([k + ": " + v for k, v in leg_indicators.items()]) + "</p>" +\
-                        f'<br>'
-
-
-        # This example assumes the image is in the current directoryddd
-        fp = open(file, 'rb')
-        msg_image = MIMEImage(fp.read())
-        fp.close()
-
-
-        # Define the image's ID as referenced above
-        msg_image.add_header('Content-ID', f'<image_{symbol}>')
-        message.attach(msg_image)
-
-    msg_text = MIMEText(message_text, 'html')
-    message_alt.attach(msg_text)
-
-    message['From'] = sender_address
-    message['Subject'] = 'Stocks only go up'
-    message.preamble = 'This is a multi-part message in MIME format.'
-
-    # Create SMTP session for sending the mail
-    session = smtplib.SMTP('smtp.gmail.com', 587)
-    session.starttls()
-    session.login(sender_address, sender_pass)
-    for receiver_address in EMAIL_LIST:
-        message['To'] = receiver_address
-        session.sendmail(sender_address, receiver_address, message.as_string())
-    session.quit()
-
-
-
 
 
 if __name__ == "__main__":
@@ -170,7 +110,7 @@ if __name__ == "__main__":
             logger.exception(e)
 
         if len(simtracker.snapshots):
-            generate_message(simtracker)
+            generate_message(simtracker, account)
 
         if not len(dates):
             return

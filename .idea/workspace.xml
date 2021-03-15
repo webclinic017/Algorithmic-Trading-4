@@ -2,9 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d18ad6e-cc75-4782-b67d-4ab1b2d8d313" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DataScrape/ASX Listings/ASX_LISTINGS 2021-03-12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataScrape/Dailies/Daily Thread 2021-03-03 Wednesday.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataScrape/Dailies/Daily Thread 2021-03-04 Thursday.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataScrape/Dailies/Daily Thread 2021-03-05 Friday.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataScrape/Dailies/Daily Thread 2021-03-08 Monday.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataScrape/Dailies/Daily Thread 2021-03-09 Tuesday.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataScrape/Dailies/Daily Thread 2021-03-12 Friday.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Datasets/companies_asxgame.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Datasets/ledger_add.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/SendMail.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Components/Process.py" beforeDir="false" afterPath="$PROJECT_DIR$/Components/Process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScrape/ScrapeReddit.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataScrape/ScrapeReddit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataScrape/Symbols/VAS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DataScrape/Symbols/VAS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datasets/CSV/VAS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/CSV/VAS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datasets/CSV_DAILY/VAS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/CSV_DAILY/VAS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datasets/CSV_REPAIR/VAS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/CSV_REPAIR/VAS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datasets/dllib.py" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/dllib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datasets/ledger_update.py" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/ledger_update.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datasets/repair.py" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/repair.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datasets/scrape_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/scrape_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datasets/tickers_ledger.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/tickers_ledger.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainEmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainEmail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/TradingCalendar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Services/TradingCalendar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Simulate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Simulate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strategies/Crossover.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategies/Crossover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strategies/Crystal.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategies/Crystal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strategies/MACD.py" beforeDir="false" afterPath="$PROJECT_DIR$/Strategies/MACD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/Indicators.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Indicators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/_config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,14 +66,15 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Strategies/Oldies" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Datasets" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\liamd\Documents\Project\AlgoTrading\Datasets" />
       <recent name="C:\Users\liamd\Documents\Project\AlgoTrading\Strategies\Oldies" />
       <recent name="C:\Users\liamd\Documents\Project\AlgoTrading" />
-      <recent name="C:\Users\liamd\Documents\Project\AlgoTrading\Datasets" />
       <recent name="C:\Users\liamd\Documents\Project\AlgoTrading\DataScrape" />
       <recent name="C:\Users\liamd\Documents\Project\AlgoTrading\DataScrape\Symbols" />
     </key>
@@ -58,8 +86,8 @@
       <recent name="C:\Users\liamd\Documents\Project\AlgoTrading\Output\Emails" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Simulate">
-    <configuration name="MainEmail" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.scrape_data">
+    <configuration name="ASX_Listings Downloader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AlgoTrading" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -67,34 +95,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataScrape" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainEmail.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataScrape/ASX_Listings Downloader.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Optimise" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="AlgoTrading" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Optimise.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -122,7 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TradingClock" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="ledger_update" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AlgoTrading" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -130,13 +137,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Services" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Datasets" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Services/TradingClock.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Datasets/ledger_update.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="repair" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AlgoTrading" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Datasets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Datasets/repair.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -157,7 +185,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Datasets/scrape_data.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -165,19 +193,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.MainEmail" />
-      <item itemvalue="Python.Optimise" />
+      <item itemvalue="Python.ASX_Listings Downloader" />
       <item itemvalue="Python.Simulate" />
-      <item itemvalue="Python.TradingClock" />
+      <item itemvalue="Python.ledger_update" />
+      <item itemvalue="Python.repair" />
       <item itemvalue="Python.scrape_data" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Simulate" />
-        <item itemvalue="Python.MainEmail" />
-        <item itemvalue="Python.MainEmail" />
-        <item itemvalue="Python.MainEmail" />
-        <item itemvalue="Python.Optimise" />
+        <item itemvalue="Python.scrape_data" />
+        <item itemvalue="Python.scrape_data" />
+        <item itemvalue="Python.scrape_data" />
+        <item itemvalue="Python.ledger_update" />
+        <item itemvalue="Python.ledger_update" />
       </list>
     </recent_temporary>
   </component>
@@ -218,10 +246,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="679" y="146" key="#MainEmail/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614114838794" />
-    <state x="679" y="146" key="#Simulate" timestamp="1614245458043">
+    <state x="679" y="146" key="#ScrapeReddit" timestamp="1615083010106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="679" y="146" key="#Simulate/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614245458043" />
+    <state x="679" y="146" key="#ScrapeReddit/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615083010106" />
+    <state x="679" y="146" key="#Simulate" timestamp="1615241503864">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="679" y="146" key="#Simulate/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615241503864" />
     <state x="449" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613819421430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -252,22 +284,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="679" y="146" key="#ibsim2/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1613635508410" />
+    <state x="679" y="146" key="#ledger_add" timestamp="1615118027185">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="679" y="146" key="#ledger_add/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615118027185" />
     <state x="542" y="0" key="#viewer" timestamp="1613908575095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="0" key="#viewer/0.0.1280.680@0.0.1280.680" timestamp="1613877630446" />
     <state x="542" y="0" key="#viewer/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1613908575095" />
-    <state x="501" y="369" width="1152" height="452" key="#xdebugger.evaluate" timestamp="1614646999957">
+    <state x="291" y="41" width="1440" height="813" key="#xdebugger.evaluate" timestamp="1615509275557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="629" y="122" width="488" height="558" key="#xdebugger.evaluate/0.0.1280.680@0.0.1280.680" timestamp="1614498374096" />
-    <state x="501" y="369" width="1152" height="452" key="#xdebugger.evaluate/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614646999957" />
+    <state x="291" y="41" width="1440" height="813" key="#xdebugger.evaluate/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615509275557" />
     <state x="2078" y="682" key="#xdebugger.evaluate/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1609509535304" />
-    <state x="69" y="0" key="CommitChangelistDialog2" timestamp="1614653599166">
+    <state x="389" y="197" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614910054434">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="389" y="197" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1614910054434" />
+    <state x="69" y="0" key="CommitChangelistDialog2" timestamp="1615270016096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="46" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1613126107774" />
-    <state x="69" y="0" key="CommitChangelistDialog2/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614653599166" />
+    <state x="69" y="0" key="CommitChangelistDialog2/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615270016096" />
     <state width="1117" height="287" key="DebuggerActiveHint" timestamp="1613648312924">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -277,77 +317,77 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1613909595963" />
-    <state width="1899" height="394" key="GridCell.Tab.0.bottom" timestamp="1614655441651">
+    <state width="1899" height="516" key="GridCell.Tab.0.bottom" timestamp="1615510326946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="756" height="226" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1614498729398" />
-    <state width="1899" height="394" key="GridCell.Tab.0.bottom/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614655441651" />
+    <state width="1899" height="270" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1615289594280" />
+    <state width="1899" height="516" key="GridCell.Tab.0.bottom/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615510326946" />
     <state width="1259" height="306" key="GridCell.Tab.0.bottom/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1614578764502" />
-    <state width="1899" height="394" key="GridCell.Tab.0.center" timestamp="1614655441651">
+    <state width="1899" height="516" key="GridCell.Tab.0.center" timestamp="1615510326945">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="756" height="226" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1614498729397" />
-    <state width="1899" height="394" key="GridCell.Tab.0.center/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614655441651" />
+    <state width="1899" height="270" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1615289594280" />
+    <state width="1899" height="516" key="GridCell.Tab.0.center/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615510326945" />
     <state width="1259" height="306" key="GridCell.Tab.0.center/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1614578764502" />
-    <state width="1899" height="394" key="GridCell.Tab.0.left" timestamp="1614655441650">
+    <state width="1899" height="516" key="GridCell.Tab.0.left" timestamp="1615510326945">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="756" height="226" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1614498729397" />
-    <state width="1899" height="394" key="GridCell.Tab.0.left/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614655441650" />
+    <state width="1899" height="270" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1615289594280" />
+    <state width="1899" height="516" key="GridCell.Tab.0.left/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615510326945" />
     <state width="1259" height="306" key="GridCell.Tab.0.left/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1614578764502" />
-    <state width="1899" height="394" key="GridCell.Tab.0.right" timestamp="1614655441651">
+    <state width="1899" height="516" key="GridCell.Tab.0.right" timestamp="1615510326946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="756" height="226" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1614498729398" />
-    <state width="1899" height="394" key="GridCell.Tab.0.right/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614655441651" />
+    <state width="1899" height="270" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1615289594280" />
+    <state width="1899" height="516" key="GridCell.Tab.0.right/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615510326946" />
     <state width="1259" height="306" key="GridCell.Tab.0.right/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1614578764502" />
-    <state width="1899" height="394" key="GridCell.Tab.1.bottom" timestamp="1614655441651">
+    <state width="1899" height="270" key="GridCell.Tab.1.bottom" timestamp="1615509491699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="756" height="226" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1614498729398" />
-    <state width="1899" height="394" key="GridCell.Tab.1.bottom/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614655441651" />
+    <state width="1899" height="270" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1615289594280" />
+    <state width="1899" height="270" key="GridCell.Tab.1.bottom/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615509491699" />
     <state width="1259" height="306" key="GridCell.Tab.1.bottom/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1614578764503" />
-    <state width="1899" height="394" key="GridCell.Tab.1.center" timestamp="1614655441651">
+    <state width="1899" height="270" key="GridCell.Tab.1.center" timestamp="1615509491699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="756" height="226" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1614498729398" />
-    <state width="1899" height="394" key="GridCell.Tab.1.center/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614655441651" />
+    <state width="1899" height="270" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1615289594280" />
+    <state width="1899" height="270" key="GridCell.Tab.1.center/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615509491699" />
     <state width="1259" height="306" key="GridCell.Tab.1.center/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1614578764502" />
-    <state width="1899" height="394" key="GridCell.Tab.1.left" timestamp="1614655441651">
+    <state width="1899" height="270" key="GridCell.Tab.1.left" timestamp="1615509491699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="756" height="226" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1614498729398" />
-    <state width="1899" height="394" key="GridCell.Tab.1.left/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614655441651" />
+    <state width="1899" height="270" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1615289594280" />
+    <state width="1899" height="270" key="GridCell.Tab.1.left/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615509491699" />
     <state width="1259" height="306" key="GridCell.Tab.1.left/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1614578764502" />
-    <state width="1899" height="394" key="GridCell.Tab.1.right" timestamp="1614655441651">
+    <state width="1899" height="270" key="GridCell.Tab.1.right" timestamp="1615509491699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="756" height="226" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1614498729398" />
-    <state width="1899" height="394" key="GridCell.Tab.1.right/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614655441651" />
+    <state width="1899" height="270" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1615289594280" />
+    <state width="1899" height="270" key="GridCell.Tab.1.right/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615509491699" />
     <state width="1259" height="306" key="GridCell.Tab.1.right/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1614578764503" />
     <state x="463" y="165" key="SettingsEditor" timestamp="1612181252744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="165" key="SettingsEditor/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1612181252744" />
-    <state width="1032" height="349" key="XDebugger.FullValuePopup" timestamp="1614563477459">
-      <screen x="1920" y="570" width="1280" height="693" />
+    <state width="1547" height="523" key="XDebugger.FullValuePopup" timestamp="1615509075455">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="408" height="342" key="XDebugger.FullValuePopup/0.0.1280.680@0.0.1280.680" timestamp="1613999411469" />
-    <state width="1547" height="523" key="XDebugger.FullValuePopup/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614429630421" />
+    <state width="1547" height="523" key="XDebugger.FullValuePopup/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615509075455" />
     <state width="1032" height="349" key="XDebugger.FullValuePopup/1920.570.1280.693/0.0.1920.1040@1920.570.1280.693" timestamp="1614563477459" />
     <state x="289" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612989893762">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="289" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1612989893762" />
-    <state x="629" y="118" width="661" height="804" key="find.popup" timestamp="1614648442000">
+    <state x="629" y="118" width="661" height="804" key="find.popup" timestamp="1614680641057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="629" y="118" width="661" height="804" key="find.popup/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614648442000" />
-    <state x="977" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1614566540072">
+    <state x="629" y="118" width="661" height="804" key="find.popup/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614680641057" />
+    <state x="977" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1615262344439">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="651" y="149" width="672" height="444" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1613998616921" />
-    <state x="977" y="230" width="672" height="678" key="search.everywhere.popup/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1614566540072" />
+    <state x="977" y="230" width="672" height="678" key="search.everywhere.popup/1920.570.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1615262344439" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -368,29 +408,14 @@
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Datasets/repair.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="163" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Strategies/viewer.py</url>
           <line>61</line>
           <option name="timeStamp" value="224" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Strategies/MACD.py</url>
-          <line>146</line>
-          <option name="timeStamp" value="227" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Datasets/scrape_data.py</url>
-          <line>167</line>
+          <line>165</line>
           <option name="timeStamp" value="233" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Strategies/MACD.py</url>
-          <line>145</line>
-          <option name="timeStamp" value="270" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Datasets/dllib.py</url>
@@ -429,13 +454,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Strategies/RocketCatcher.py</url>
-          <line>313</line>
+          <line>314</line>
           <option name="timeStamp" value="366" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Services/SimViewer.py</url>
-          <line>252</line>
-          <option name="timeStamp" value="385" />
+          <url>file://$PROJECT_DIR$/Strategies/Breakouts.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="415" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategies/MACD.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="416" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategies/Testing.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="429" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategies/Testing.py</url>
+          <line>93</line>
+          <option name="timeStamp" value="430" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Strategies/Testing.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="431" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

@@ -5,7 +5,6 @@ from shutil import copyfile
 
 import numpy as np
 import pandas as pd
-from workalendar.oceania.australia import NewSouthWales
 
 sys.path.append('..')
 
@@ -142,7 +141,6 @@ def scrape_repair(ticker, period, start_date):
     datafactory = DataFactory.getInstance()
 
     daydelta = datetime.timedelta(days=1)
-    cal = NewSouthWales()
     csv_path = datafactory.getDataDir(period) + datafactory.symbol2file(ticker)
 
     # Load the dataframe, get list of dates
@@ -289,7 +287,6 @@ def scrape_repair(ticker, period, start_date):
     outstanding_dates = len(missing_dates) - fixed_dates
     fixed_times = fixed_rows
     outstanding_times = sum([len(x) for x in missing_days_times.values()]) - fixed_times
-    print(fixed_dates)
 
     return True, outstanding_dates, outstanding_times
 
@@ -340,7 +337,7 @@ if __name__ == "__main__":
     repair_df_tickers = list(repair_df["TICKER"])
 
     # Download
-    periods = ["1d"]  # if not testing else ["5m"]
+    periods = ["5m", "1d"]  # if not testing else ["5m"]
     for period in periods:
         if period == "5m":
             lookback = datetime.timedelta(days=60)  # if not testing else datetime.timedelta(days=60)

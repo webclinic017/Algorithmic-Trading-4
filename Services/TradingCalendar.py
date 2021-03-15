@@ -2,13 +2,10 @@ import datetime
 
 import numpy as np
 import pandas as pd
-from workalendar.oceania.australia import NewSouthWales
 
 
 class TradingCalendar():
     # https://www.marketbeat.com/stock-market-holidays/australia/
-
-    auscal = NewSouthWales()
     normal_close = datetime.time(hour=16, minute=10)
     holidays = [
         datetime.date(2020, 12, 25),

@@ -21,7 +21,7 @@ def getDataframe(ticker: str, start_date: datetime, end_date: datetime, period: 
     print(f"Download called for {ticker} with arguments {start_date} -> {end_date}")
 
     dataframe = pd.DataFrame()
-    time_spread = datetime.timedelta(days=133) if period == "1d" else datetime.timedelta(days=7)
+    time_spread = datetime.timedelta(days=133) if period == "1d" else datetime.timedelta(days=31)
 
     ''' TODO: This is naive, what if the data fails consistently? Missing data doesn't throw an exception'''
     while (True):
@@ -35,8 +35,8 @@ def getDataframe(ticker: str, start_date: datetime, end_date: datetime, period: 
                                        start=start_date.strftime("%Y-%m-%d"),
                                        end=to_date.strftime("%Y-%m-%d"),
                                        interval=period)
-            if not instant:
-                time.sleep(5)
+            if not instant: # input should be time not boolean
+                time.sleep(3)
 
             dataframe = pd.concat([dataframe, dataframe_dl])
             if dataframe.empty:

@@ -535,10 +535,10 @@ if __name__ == "__main__":
     for file_name in src_files:
         full_file_name = os.path.join(DAILY_BASE, file_name)
         if os.path.isfile(full_file_name):
-            shutil.copy(full_file_name, r"C:\Users\liamd\OneDrive\Quantitative Trading\xml scrapes")
+            shutil.copy(full_file_name, r"C:\Users\liamd\OneDrive\Documents\Quantitative Trading\xml scrapes")
 
     src_files = os.listdir(CSV_BASE)
     for file_name in src_files:
         full_file_name = os.path.join(CSV_BASE, file_name)
         if os.path.isfile(full_file_name):
-            shutil.copy(full_file_name, r"C:\Users\liamd\OneDrive\Quantitative Trading\xml scrapes\Symbols")
+            shutil.copy(full_file_name, r"C:\Users\liamd\OneDrive\Documents\Quantitative Trading\xml scrapes\Symbols")

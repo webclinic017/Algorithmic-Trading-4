@@ -8,33 +8,41 @@ from _config import TICKERS_LEDGER
 if __name__ == "__main__":
     '''Add to the tickers ledger'''
     listings = pd.read_csv(ASX_LISTING)
+    listings.index = pd.Index(listings.code)
+
     tickers_ledger = pd.read_csv(TICKERS_LEDGER)
+    tickers_ledger.index = pd.Index(tickers_ledger.TICKER)
 
-    count = 0
+    counter = 0
+    for i, row in listings.iterrows():
+        symbol = row["code"]
+        low = row["52w_low"]
+        high = row["52w_high"]
+        last = row["last"]
 
-    src_files = os.listdir(CSV_BASE)
-    for file_name in src_files:
-        full_file_name = os.path.join(CSV_BASE, file_name)
-        symbol_sentiment = pd.read_csv(full_file_name)
+        change_52w = (high - low)/low if low > 0 else 0
+        dreadful = last < 1
+        allow = change_52w > 1 or dreadful
+        if not allow:
+            continue
 
-        if sum(symbol_sentiment.mentions) > 0:
-            symbol = file_name[:-4]
-            if symbol in listings.code.values:
-                symbol_yh = symbol + ".AX"
-                if symbol_yh not in tickers_ledger.TICKER.values:
-                    # print(symbol)
-                    count += 1
 
-                    symbols_dict = {
-                        "TICKER": symbol_yh,
-                        "CAT": 99,
-                        "STATUS": "",
-                        "COLL_LAST": "",
-                        "COLL_FREQ": 55,
-                        "REPAIR_LAST": "",
-                        "REPAIR_FREQ": 55,
-                        "MISSING_DATES": 0,
-                        "MISSING_TIMES": 0,
-                    }
-                    tickers_ledger = tickers_ledger.append(symbols_dict, ignore_index=True)
+        symbol_yh = symbol + ".AX"
+        if symbol_yh not in tickers_ledger.TICKER.values:
+            print(symbol_yh)
+            counter += 1
+            symbols_dict = {
+                "TICKER": symbol_yh,
+                "CAT": 99,
+                "STATUS": "",
+                "COLL_LAST": "",
+                "COLL_FREQ": 55,
+                "REPAIR_LAST": "",
+                "REPAIR_FREQ": 55,
+                "MISSING_DATES": 0,
+                "MISSING_TIMES": 0,
+            }
+            tickers_ledger = tickers_ledger.append(symbols_dict, ignore_index=True)
+
+    print(f"Adding {counter} tickers")
     tickers_ledger.to_csv(TICKERS_LEDGER, index=False)
